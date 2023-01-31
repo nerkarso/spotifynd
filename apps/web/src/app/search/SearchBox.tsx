@@ -1,5 +1,7 @@
 'use client';
 
+import { Input } from '@/ui';
+
 function search(query: string) {
   const collection: NodeListOf<HTMLDivElement> =
     document.querySelectorAll('.track');
@@ -14,10 +16,10 @@ function search(query: string) {
 
 export default function SearchBox() {
   return (
-    <input
+    <Input
       type="search"
       placeholder="Search"
-      className="input w-full max-w-xs border-2 border-base-200 rounded-lg"
+      className="w-full max-w-xs"
       onChange={(e) => search(e.target.value.toLowerCase())}
     />
   );

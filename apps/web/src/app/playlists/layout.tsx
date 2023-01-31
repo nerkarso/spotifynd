@@ -1,5 +1,6 @@
 import { getSession } from '../../lib/getSession';
 import { spotifyApi } from '../../lib/spotifyApi';
+import PlaylistSelector from './PlaylistSelector';
 import Link from 'next/link';
 
 async function allUserPlaylists() {
@@ -16,15 +17,15 @@ export default async function layout({ children }: any) {
   const userPlaylists = await allUserPlaylists();
 
   return (
-    <div className="flex gap-4">
-      <aside className="w-1/4">
-        <h1>Playlists</h1>
-        <div className="mt-4 divide-y">
-          {userPlaylists?.items.map((playlist) => (
+    <div className="flex flex-wrap">
+      <aside className="flex-[1_1_30%] min-w-[15ch] hidden sm:block">
+        <div className="divide-y divide-neutral-800 mr-4">
+          {userPlaylists?.items?.map((playlist) => (
             <Link
+              prefetch={false}
               href={`/playlists/${playlist.id}`}
               key={playlist.id}
-              className="py-1 block hover:bg-primary"
+              className="block py-2 hover:bg-neutral-800 px-2"
             >
               <p>{playlist.name}</p>
               <p>{playlist.description}</p>
@@ -32,7 +33,10 @@ export default async function layout({ children }: any) {
           ))}
         </div>
       </aside>
-      <main className="flex-1">{children}</main>
+      <div className="mb-4 sm:hidden">
+        <PlaylistSelector items={userPlaylists?.items} />
+      </div>
+      <main className="flex-[1_1_70%] min-w-[25ch]">{children}</main>
     </div>
   );
 }

@@ -1,6 +1,8 @@
 'use client';
 
 import { SPOTIFY_CLIENT_ID, SPOTIFY_REDIRECT_URL } from '@/config/env';
+import { Button } from '@/ui';
+import { LogIn } from 'lucide-react';
 import queryString from 'query-string';
 
 export default function ButtonLogin() {
@@ -30,8 +32,9 @@ export default function ButtonLogin() {
   }
 
   return (
-    <button onClick={handleLogin} className="btn btn-primary">
+    <Button onClick={handleLogin} variant="subtle" className="gap-2 px-3">
+      <LogIn size={16} className="flex-shrink-0" />
       Login
-    </button>
+    </Button>
   );
 }

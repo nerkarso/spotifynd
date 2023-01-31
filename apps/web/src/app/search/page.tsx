@@ -17,14 +17,11 @@ export default async function page() {
   const userPlaylists = await allUserPlaylists();
 
   return (
-    <div className="space-y-4">
-      {userPlaylists?.items.map((playlist) => (
-        <div
-          key={playlist.id}
-          className="py-3 px-4 rounded-lg border-base-200 border-2"
-        >
-          <div className="top-0 sticky py-2 bg-base-100 z-10">
-            <h4>{playlist.name}</h4>
+    <div className="space-y-4 divide-y divide-neutral-800">
+      {userPlaylists?.items?.slice(0, -1)?.map((playlist: any) => (
+        <div key={playlist.id}>
+          <div className="top-16 sticky py-3 bg-neutral-900/80 backdrop-blur-lg z-10 border-b border-neutral-800">
+            <h4 className="text-lg font-bold">{playlist.name}</h4>
           </div>
           <PlaylistTracks id={playlist.id} />
         </div>
@@ -45,7 +42,10 @@ async function TracksListPromise({ promise }: any) {
   const playlistTracks: SpotifyApi.PlaylistTrackResponse = await promise;
 
   return (
-    <TracksList className="grid grid-cols-4 gap-2" response={playlistTracks} />
+    <TracksList
+      className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-2"
+      response={playlistTracks}
+    />
   );
 }
 

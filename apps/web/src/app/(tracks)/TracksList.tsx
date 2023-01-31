@@ -16,8 +16,9 @@ export default function TracksList({
         return (
           <div className="track" key={track?.id}>
             <Link
+              prefetch={false}
               href={`https://open.spotify.com/track/${track?.id}`}
-              className="py-2 flex gap-2 hover:bg-primary/30 px-2 rounded"
+              className="grid grid-cols-[3.5rem,1fr] gap-3 hover:bg-neutral-800 p-2 rounded-lg items-center"
               target="_blank"
             >
               <div className="w-14 h-14 relative rounded overflow-hidden">
@@ -30,7 +31,9 @@ export default function TracksList({
               </div>
               <div>
                 <p>{track?.name}</p>
-                <p className="text-sm opacity-75">{artists?.join(', ')}</p>
+                <p className="text-sm text-neutral-400">
+                  {artists?.join(', ')}
+                </p>
               </div>
             </Link>
           </div>
