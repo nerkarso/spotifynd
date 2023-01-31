@@ -1,4 +1,4 @@
-# Spotifind
+# Spotifynd
 
 Find the track you forgot you have in your Spotify library.
 
