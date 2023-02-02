@@ -3,9 +3,10 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: "*",
+        hostname: '*',
       },
     ],
+    unoptimized: true,
   },
   experimental: {
     appDir: true,
