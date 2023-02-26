@@ -1,6 +1,15 @@
 import SiteHeader from '@/app/(root)/SiteHeader';
+import { siteConfig } from '@/config/site';
 import { DM_Sans as FontSans } from '@next/font/google';
+import { Metadata } from 'next';
 import './globals.css';
+
+export const metadata: Metadata = {
+  title: siteConfig.name,
+  icons: {
+    icon: '/img/icon.png',
+  },
+};
 
 const fontSans = FontSans({
   subsets: ['latin'],
