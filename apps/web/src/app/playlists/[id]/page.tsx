@@ -15,7 +15,7 @@ export default async function page({ params }: any) {
 
   return (
     <TracksList
-      className="divide-y divide-neutral-800"
+      className="divide-y divide-base-800"
       response={playlistTracks}
     />
   );

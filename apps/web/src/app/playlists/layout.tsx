@@ -19,13 +19,13 @@ export default async function layout({ children }: any) {
   return (
     <div className="flex flex-wrap">
       <aside className="flex-[1_1_30%] min-w-[15ch] hidden sm:block">
-        <div className="divide-y divide-neutral-800 mr-4">
+        <div className="divide-y divide-base-800 mr-4">
           {userPlaylists?.items?.map((playlist) => (
             <Link
               prefetch={false}
               href={`/playlists/${playlist.id}`}
               key={playlist.id}
-              className="block py-2 hover:bg-neutral-800 px-2"
+              className="block py-2 hover:bg-base-800 px-2"
             >
               <p>{playlist.name}</p>
               <p>{playlist.description}</p>

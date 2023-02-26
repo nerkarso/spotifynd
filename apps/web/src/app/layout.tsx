@@ -26,7 +26,7 @@ export default function layout({ children }: React.PropsWithChildren) {
       }}
     >
       <head />
-      <body className="min-h-screen bg-white font-sans text-neutral-900 antialiased dark:bg-neutral-900 dark:text-neutral-50">
+      <body className="min-h-screen bg-white font-sans text-base-900 antialiased dark:bg-base-900 dark:text-base-50">
         <SiteHeader />
         <main className="p-4">{children}</main>
       </body>

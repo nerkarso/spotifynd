@@ -41,7 +41,7 @@ async function UserProfile({ promise }: any) {
         </div>
         <div className="hidden sm:block">
           <p className="text-sm">{user.display_name}</p>
-          <p className="text-xs text-neutral-400">{user.email}</p>
+          <p className="text-xs text-base-400">{user.email}</p>
         </div>
       </div>
       <ButtonLogout />

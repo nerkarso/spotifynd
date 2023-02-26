@@ -17,10 +17,10 @@ export default async function page() {
   const userPlaylists = await allUserPlaylists();
 
   return (
-    <div className="space-y-4 divide-y divide-neutral-800">
+    <div className="space-y-4 divide-y divide-base-800">
       {userPlaylists?.items?.slice(0, -1)?.map((playlist: any) => (
         <div key={playlist.id}>
-          <div className="top-16 sticky py-3 bg-neutral-900/80 backdrop-blur-lg z-10 border-b border-neutral-800">
+          <div className="top-16 sticky py-3 bg-base-900/80 backdrop-blur-lg z-10 border-b border-base-800">
             <h4 className="text-lg font-bold">{playlist.name}</h4>
           </div>
           <PlaylistTracks id={playlist.id} />
