@@ -1,5 +1,7 @@
 # Spotifynd
 
+![Screenshot](https://i.postimg.cc/Prwj18zn/Screenshot-2023-02-26-at-12-23-34-AM.png)
+
 Find the track you forgot you have in your Spotify library.
 
 ## Motivation
