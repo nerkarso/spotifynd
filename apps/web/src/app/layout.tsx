@@ -13,8 +13,7 @@ export default function layout({ children }: React.PropsWithChildren) {
     <html
       lang="en"
       style={{
-        // @ts-ignore
-        '--font-sans': fontSans.style.fontFamily,
+        ['--font-sans' as string]: fontSans.style.fontFamily,
       }}
     >
       <head />
