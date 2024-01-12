@@ -1,7 +1,7 @@
 import SiteHeader from '@/app/(root)/SiteHeader';
 import { siteConfig } from '@/config/site';
-import { DM_Sans as FontSans } from '@next/font/google';
 import { Metadata } from 'next';
+import { DM_Sans as FontSans } from 'next/font/google';
 import './globals.css';
 
 export const metadata: Metadata = {

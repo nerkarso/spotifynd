@@ -4,9 +4,6 @@ const nextConfig = {
     remotePatterns: [{ hostname: '*' }],
     unoptimized: true,
   },
-  experimental: {
-    appDir: true,
-  },
 };
 
 module.exports = nextConfig;
