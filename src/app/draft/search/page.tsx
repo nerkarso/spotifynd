@@ -10,10 +10,7 @@ export default function SearchPage() {
         <div className="max-w-screen-lg px-4 mx-auto">
           <div className="flex items-center gap-4 mb-2">
             <Link href="/" className="focus:outline-none" prefetch={false}>
-              <img
-                src="/icons/android-chrome-192x192.png"
-                className="w-10 h-10"
-              />
+              <img src="/icons/android-chrome-192x192.png" className="w-10 h-10" />
             </Link>
             <div className="flex-grow flex-shrink-0">
               <SearchField className="w-full" />
@@ -31,7 +28,7 @@ export default function SearchPage() {
       </header>
       <section className="max-w-screen-lg px-2 mx-auto">
         <TrackListHeader />
-        {[...Array(20).keys()].map((i) => (
+        {Array.from(Array(20).keys()).map((i) => (
           <TrackItem key={i} i={i} />
         ))}
       </section>

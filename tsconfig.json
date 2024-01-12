@@ -16,6 +16,7 @@
     "forceConsistentCasingInFileNames": true,
     "plugins": [{ "name": "next" }],
     "paths": {
+      "@/ui": ["./src/components/ui"],
       "@/*": ["./src/*"]
     }
   },

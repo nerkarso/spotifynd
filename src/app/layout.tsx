@@ -1,8 +1,9 @@
-import SiteHeader from '@/app/(root)/SiteHeader';
+import '@/styles/globals.css';
+
 import { siteConfig } from '@/config/site';
+import { cn } from '@/lib/utils';
 import { Metadata } from 'next';
 import { DM_Sans as FontSans } from 'next/font/google';
-import './globals.css';
 
 export const metadata: Metadata = {
   title: siteConfig.name,
@@ -14,21 +15,19 @@ export const metadata: Metadata = {
 const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans',
-  weight: '500',
 });
 
 export default function layout({ children }: React.PropsWithChildren) {
   return (
-    <html
-      lang="en"
-      style={{
-        ['--font-sans' as string]: fontSans.style.fontFamily,
-      }}
-    >
+    <html lang="en">
       <head />
-      <body className="min-h-screen bg-white font-sans text-base-900 antialiased dark:bg-base-900 dark:text-base-50">
-        <SiteHeader />
-        <main className="p-4">{children}</main>
+      <body
+        className={cn(
+          'min-h-screen font-sans antialiased dark:bg-base-900 dark:text-base-50',
+          fontSans.variable
+        )}
+      >
+        {children}
       </body>
     </html>
   );

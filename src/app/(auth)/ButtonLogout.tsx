@@ -9,12 +9,7 @@ export default function ButtonLogout() {
   }
 
   return (
-    <Button
-      variant="subtle"
-      onClick={handleLogout}
-      className="gap-2 px-3"
-      size="sm"
-    >
+    <Button variant="subtle" onClick={handleLogout} className="gap-2 px-3" size="sm">
       <LogOut size={16} className="flex-shrink-0" />
       Log out
     </Button>
