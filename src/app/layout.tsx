@@ -7,6 +7,7 @@ import { DM_Sans as FontSans } from 'next/font/google';
 
 export const metadata: Metadata = {
   title: siteConfig.name,
+  description: siteConfig.seo.description,
   icons: {
     icon: '/img/icon.png',
   },
@@ -23,7 +24,7 @@ export default function layout({ children }: React.PropsWithChildren) {
       <head />
       <body
         className={cn(
-          'min-h-screen font-sans antialiased dark:bg-base-900 dark:text-base-50',
+          'min-h-screen font-sans antialiased dark:bg-base-950 dark:text-base-50',
           fontSans.variable
         )}
       >
