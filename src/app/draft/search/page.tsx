@@ -9,8 +9,8 @@ export default function SearchPage() {
       <header className="sticky top-0 z-20 mb-6 border-b border-base-50/15 bg-black pt-6">
         <div className="mx-auto max-w-screen-lg px-4">
           <div className="mb-2 flex items-center gap-4">
-            <Link href="/" className="focus:outline-none" prefetch={false}>
-              <img src="/icons/android-chrome-192x192.png" className="h-10 w-10" />
+            <Link className="focus:outline-none" href="/" prefetch={false}>
+              <img alt="" className="h-10 w-10" src="/icons/android-chrome-192x192.png" />
             </Link>
             <div className="flex-shrink-0 flex-grow">
               <SearchField className="w-full" />

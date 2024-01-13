@@ -1,7 +1,7 @@
+import { Suspense } from 'react';
 import TracksList from '../(tracks)/TracksList';
 import { getSession } from '../../lib/getSession';
 import { spotifyApi } from '../../lib/spotifyApi';
-import { Suspense } from 'react';
 
 async function allUserPlaylists() {
   if (!getSession()) return null;

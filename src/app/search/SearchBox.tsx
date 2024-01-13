@@ -16,9 +16,9 @@ function search(query: string) {
 export default function SearchBox() {
   return (
     <Input
-      type="search"
-      placeholder="Search"
       className="w-full max-w-xs"
+      placeholder="Search"
+      type="search"
       onChange={(e) => search(e.target.value.toLowerCase())}
     />
   );

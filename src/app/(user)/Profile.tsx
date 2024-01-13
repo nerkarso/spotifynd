@@ -32,7 +32,7 @@ async function UserProfile({ promise }: any) {
     <div className="flex items-center gap-4">
       <div className="flex items-center gap-2">
         <div className="relative h-10 w-10 overflow-hidden rounded-full">
-          <Image src={user.images?.[0].url || ''} fill alt="Avatar" className="object-cover" />
+          <Image fill alt="Avatar" className="object-cover" src={user.images?.[0].url || ''} />
         </div>
         <div className="hidden sm:block">
           <p className="text-sm">{user.display_name}</p>

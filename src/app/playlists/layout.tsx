@@ -21,10 +21,10 @@ export default async function layout({ children }: any) {
         <div className="mr-4 divide-y divide-base-800">
           {userPlaylists?.items?.map((playlist) => (
             <Link
-              prefetch={false}
-              href={`/playlists/${playlist.id}`}
               key={playlist.id}
               className="block px-2 py-2 hover:bg-base-800"
+              href={`/playlists/${playlist.id}`}
+              prefetch={false}
             >
               <p>{playlist.name}</p>
               <p>{playlist.description}</p>

@@ -32,8 +32,8 @@ export default function ButtonLogin() {
   }
 
   return (
-    <Button onClick={handleLogin} variant="subtle" className="gap-2 px-3">
-      <LogIn size={16} className="flex-shrink-0" />
+    <Button className="gap-2 px-3" variant="subtle" onClick={handleLogin}>
+      <LogIn className="flex-shrink-0" size={16} />
       Login
     </Button>
   );
