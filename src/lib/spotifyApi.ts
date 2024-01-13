@@ -1,8 +1,4 @@
-import {
-  SPOTIFY_CLIENT_ID,
-  SPOTIFY_CLIENT_SECRET,
-  SPOTIFY_REDIRECT_URL,
-} from '@/config/env';
+import { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, SPOTIFY_REDIRECT_URL } from '@/config/env';
 import SpotifyWebApi from 'spotify-web-api-node';
 
 export const spotifyApi = new SpotifyWebApi({

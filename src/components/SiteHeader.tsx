@@ -8,8 +8,8 @@ import Link from 'next/link';
 
 export default function SiteHeader() {
   return (
-    <header className="bg-base-900/80 backdrop-blur-lg sticky top-0 border-b border-base-800 z-20">
-      <div className="flex gap-4 px-4 h-16 items-center">
+    <header className="sticky top-0 z-20 border-b border-base-800 bg-base-900/80 backdrop-blur-lg">
+      <div className="flex h-16 items-center gap-4 px-4">
         <Image src="/img/icon.png" alt="Logo" width={32} height={32} />
         <Link
           prefetch={false}

@@ -1,10 +1,7 @@
 import { spotifyApi } from '@/lib/spotifyApi';
 import { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const code = req.query.code as string;
 
   try {

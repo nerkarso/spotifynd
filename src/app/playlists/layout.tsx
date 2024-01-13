@@ -17,14 +17,14 @@ export default async function layout({ children }: any) {
 
   return (
     <div className="flex flex-wrap">
-      <aside className="flex-[1_1_30%] min-w-[15ch]">
-        <div className="divide-y divide-base-800 mr-4">
+      <aside className="min-w-[15ch] flex-[1_1_30%]">
+        <div className="mr-4 divide-y divide-base-800">
           {userPlaylists?.items?.map((playlist) => (
             <Link
               prefetch={false}
               href={`/playlists/${playlist.id}`}
               key={playlist.id}
-              className="block py-2 hover:bg-base-800 px-2"
+              className="block px-2 py-2 hover:bg-base-800"
             >
               <p>{playlist.name}</p>
               <p>{playlist.description}</p>
@@ -32,7 +32,7 @@ export default async function layout({ children }: any) {
           ))}
         </div>
       </aside>
-      <main className="flex-[1_1_70%] min-w-[25ch]">{children}</main>
+      <main className="min-w-[25ch] flex-[1_1_70%]">{children}</main>
     </div>
   );
 }

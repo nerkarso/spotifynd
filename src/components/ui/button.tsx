@@ -7,14 +7,11 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          'bg-base-900 text-white hover:bg-base-700 dark:bg-base-50 dark:text-base-900',
-        destructive:
-          'bg-red-500 text-white hover:bg-red-600 dark:hover:bg-red-600',
+        default: 'bg-base-900 text-white hover:bg-base-700 dark:bg-base-50 dark:text-base-900',
+        destructive: 'bg-red-500 text-white hover:bg-red-600 dark:hover:bg-red-600',
         outline:
           'bg-transparent border border-base-200 hover:bg-base-100 dark:border-base-700 dark:text-base-100',
-        subtle:
-          'bg-base-100 text-base-900 hover:bg-base-200 dark:bg-base-700 dark:text-base-100',
+        subtle: 'bg-base-100 text-base-900 hover:bg-base-200 dark:bg-base-700 dark:text-base-100',
         ghost:
           'bg-transparent hover:bg-base-100 dark:hover:bg-base-800 dark:text-base-100 dark:hover:text-base-100 data-[state=open]:bg-transparent dark:data-[state=open]:bg-transparent',
         link: 'bg-transparent underline-offset-4 hover:underline text-base-900 dark:text-base-100 hover:bg-transparent dark:hover:bg-transparent',
@@ -39,11 +36,7 @@ export interface ButtonProps
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, ...props }, ref) => {
     return (
-      <button
-        className={cn(buttonVariants({ variant, size, className }))}
-        ref={ref}
-        {...props}
-      />
+      <button className={cn(buttonVariants({ variant, size, className }))} ref={ref} {...props} />
     );
   }
 );

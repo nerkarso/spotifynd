@@ -2,7 +2,7 @@ export function TrackItem(props: any) {
   return (
     <a
       href="#"
-      className="grid items-center h-20 grid-flow-col px-4 py-1 my-2 tracking-wider transition duration-200 rounded-lg hover:bg-base-800 grid-cols-[2rem_1fr_1fr_1fr]"
+      className="my-2 grid h-20 grid-flow-col grid-cols-[2rem_1fr_1fr_1fr] items-center rounded-lg px-4 py-1 tracking-wider transition duration-200 hover:bg-base-800"
       target="_blank"
     >
       <span className="text-white/60">{props.i}</span>

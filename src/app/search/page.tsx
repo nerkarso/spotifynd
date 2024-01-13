@@ -20,7 +20,7 @@ export default async function page() {
     <div className="space-y-4 divide-y divide-base-800">
       {userPlaylists?.items?.slice(0, -1)?.map((playlist: any) => (
         <div key={playlist.id}>
-          <div className="top-16 sticky py-3 bg-base-900/80 backdrop-blur-lg z-10 border-b border-base-800">
+          <div className="sticky top-16 z-10 border-b border-base-800 bg-base-900/80 py-3 backdrop-blur-lg">
             <h4 className="text-lg font-bold">{playlist.name}</h4>
           </div>
           <PlaylistTracks id={playlist.id} />

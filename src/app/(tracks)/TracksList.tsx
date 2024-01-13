@@ -18,10 +18,10 @@ export default function TracksList({
             <Link
               prefetch={false}
               href={`https://open.spotify.com/track/${track?.id}`}
-              className="grid grid-cols-[3.5rem,1fr] gap-3 hover:bg-base-800 p-2 rounded-lg items-center"
+              className="grid grid-cols-[3.5rem,1fr] items-center gap-3 rounded-lg p-2 hover:bg-base-800"
               target="_blank"
             >
-              <div className="w-14 h-14 relative rounded overflow-hidden">
+              <div className="relative h-14 w-14 overflow-hidden rounded">
                 <Image
                   src={track?.album.images[0].url || ''}
                   fill

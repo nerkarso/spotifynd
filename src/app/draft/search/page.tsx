@@ -6,34 +6,34 @@ import Link from 'next/link';
 export default function SearchPage() {
   return (
     <main>
-      <header className="sticky top-0 z-20 pt-6 mb-6 bg-black border-b border-base-50/15">
-        <div className="max-w-screen-lg px-4 mx-auto">
-          <div className="flex items-center gap-4 mb-2">
+      <header className="sticky top-0 z-20 mb-6 border-b border-base-50/15 bg-black pt-6">
+        <div className="mx-auto max-w-screen-lg px-4">
+          <div className="mb-2 flex items-center gap-4">
             <Link href="/" className="focus:outline-none" prefetch={false}>
-              <img src="/icons/android-chrome-192x192.png" className="w-10 h-10" />
+              <img src="/icons/android-chrome-192x192.png" className="h-10 w-10" />
             </Link>
-            <div className="flex-grow flex-shrink-0">
+            <div className="flex-shrink-0 flex-grow">
               <SearchField className="w-full" />
             </div>
           </div>
           <div className="flex gap-6 overflow-x-auto">
-            <button className="h-12 text-sm font-semibold tracking-wide text-white transition duration-300 border-b border-white rounded-none focus:border-primary-500 focus:outline-none">
+            <button className="h-12 rounded-none border-b border-white text-sm font-semibold tracking-wide text-white transition duration-300 focus:border-primary-500 focus:outline-none">
               Tracks
             </button>
-            <button className="h-12 text-sm font-semibold tracking-wide transition duration-300 border-b border-transparent rounded-none focus:border-primary-500 text-base-400 hover:text-white focus:outline-none">
+            <button className="h-12 rounded-none border-b border-transparent text-sm font-semibold tracking-wide text-base-400 transition duration-300 hover:text-white focus:border-primary-500 focus:outline-none">
               Playlists
             </button>
           </div>
         </div>
       </header>
-      <section className="max-w-screen-lg px-2 mx-auto">
+      <section className="mx-auto max-w-screen-lg px-2">
         <TrackListHeader />
         {Array.from(Array(20).keys()).map((i) => (
           <TrackItem key={i} i={i} />
         ))}
       </section>
-      <footer className="bg-black px-4 py-6 border-t border-base-50/15">
-        <p className="text-center text-base-500 text-sm">&copy; 2022</p>
+      <footer className="border-t border-base-50/15 bg-black px-4 py-6">
+        <p className="text-center text-sm text-base-500">&copy; 2022</p>
       </footer>
     </main>
   );

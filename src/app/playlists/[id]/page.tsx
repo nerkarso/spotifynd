@@ -13,10 +13,5 @@ async function allPlaylistTracks(playlistId: string) {
 export default async function page({ params }: any) {
   const playlistTracks = await allPlaylistTracks(params.id);
 
-  return (
-    <TracksList
-      className="divide-y divide-base-800"
-      response={playlistTracks}
-    />
-  );
+  return <TracksList className="divide-y divide-base-800" response={playlistTracks} />;
 }
