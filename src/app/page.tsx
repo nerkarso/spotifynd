@@ -1,5 +1,7 @@
 import { siteConfig } from '@/config/site';
+import Authenticated from './(auth)/Authenticated';
 import ButtonLogin from './(auth)/ButtonLogin';
+import Profile from './(user)/Profile';
 
 export default async function page() {
   return (
@@ -8,10 +10,14 @@ export default async function page() {
         <div className="h-1 bg-base-800">
           <div className="h-full rounded-e bg-primary-500" style={{ width: '0%' }}></div>
         </div>
-        <div className="space-y-6 px-4 py-12 text-center">
+        <div className="flex flex-col items-center gap-6 px-4 py-12 text-center">
           <h1 className="text-5xl font-bold text-primary-500">{siteConfig.name}</h1>
           <p className="text-lg">{siteConfig.seo.description}</p>
-          <ButtonLogin />
+          <div className="text-left">
+            <Authenticated fallback={<ButtonLogin />}>
+              <Profile />
+            </Authenticated>
+          </div>
         </div>
       </div>
     </div>
